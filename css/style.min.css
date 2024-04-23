@@ -1037,3 +1037,231 @@ section {
 .read-more-icon:hover i {
   animation: bounce 1s;
 }
+@media (max-width: 768px) {
+  .sustainability-pillars-list li {
+    flex: 0 0 calc(50% - 10px); /* Adjust for 2 icons per row */
+    margin-bottom: 20px;
+    margin-right: 0.5px;
+    margin-left: 0.5px;
+    font-size: 0.8em; /* Adjust to make pillars smaller */
+  }
+
+  .sustainability-pillars-title {
+    margin-right: 20px; /* Adjust as needed */
+    margin-left: 20px;
+    font-size: 1.2em;
+  }
+
+  .sustainability-pillars {
+    padding-left: 15px;
+  }
+
+  .sustainability-pillars-list li .icon-wrap {
+    width: 30px; /* Adjust to make pillars smaller */
+    height: 30px; /* Adjust to make pillars smaller */
+  }
+}
+
+@media (max-width: 480px) {
+  .sustainability-pillars-list li {
+    flex: 0 0 calc(100% - 10px); /* Adjust for 1 icon per row */
+    margin-bottom: 20px;
+    margin-right: 0.5px;
+    margin-left: 0.5px;
+    font-size: 0.7em; /* Adjust to make pillars smaller */
+  }
+
+  .sustainability-pillars-title {
+    margin-right: 10px; /* Adjust as needed */
+    margin-left: 10px;
+    font-size: 1em;
+  }
+
+  .sustainability-pillars {
+    padding-left: 10px;
+  }
+
+  .sustainability-pillars-list li .icon-wrap {
+    width: 25px; /* Adjust to make pillars smaller */
+    height: 25px; /* Adjust to make pillars smaller */
+  }
+}
+
+.custom-header {
+  position: relative;
+  height: 100vh; /* Adjust as needed to make the image longer */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.custom-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85); /* Add an overlay */
+}
+
+.custom-header .header-content {
+  position: relative; /* Position the text above the overlay */
+  text-align: center;
+  font-size: 2em; /* Adjust as needed */
+  padding: 20px;
+}
+.pabout {
+  font-size: 0.5em;
+}
+#vision-mission {
+  padding: 60px 0;
+}
+
+#vision-mission .section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#vision-mission .vision-content,
+#vision-mission .mission-content {
+  font-size: 1em;
+  line-height: 1.6;
+}
+#executive-leadership {
+    padding: 60px 0;
+    background: #f8f9fa; /* Light gray background */
+    margin-top: -200px;
+}
+
+#executive-leadership .section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #100d5c;;
+    text-decoration: solid;
+    text-emphasis: bold;
+}
+
+#executive-leadership .leader {
+    margin-bottom: 30px;
+}
+
+#executive-leadership .leader-box {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#executive-leadership .leader-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#executive-leadership .leader-name {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+#executive-leadership .leader-title {
+    font-size: 0.8ßem;
+    color: #777;
+    margin-top: -5px;
+}
+
+.pexec{
+  text-align: center;
+  margin-bottom: 70px;
+}
+.underline {
+  width: 100px;
+  height: 2px;
+  background-color: red;
+  margin: 0 auto 20px;
+}
+
+.company-history {
+  background-color: #3B3F50;
+  color: white;
+  padding: 60px 0;
+  margin-bottom: 100px;
+}
+
+.company-history .section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.company-history .underline {
+  width: 50px;
+  height: 2px;
+  background-color: red;
+  margin: 0 auto 20px;
+}
+
+.company-history p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.company-history ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.company-history ul li {
+  margin-bottom: 10px;
+}
+.history-underline {
+  width: 200px;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto 20px;
+}
+/* Responsive CSS */
+
+@media screen and (max-width: 1200px) {
+  .company-history .section-title {
+    font-size: 1.8em;
+  }
+
+  .company-history p {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .company-history .section-title {
+    font-size: 1.6em;
+  }
+
+  .company-history p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .company-history .section-title {
+    font-size: 1.4em;
+  }
+
+  .company-history p {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .company-history .section-title {
+    font-size: 1.2em;
+  }
+
+  .company-history p {
+    font-size: 0.8em;
+  }
+}
