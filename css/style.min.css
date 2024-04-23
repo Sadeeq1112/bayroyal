@@ -394,9 +394,12 @@ section {
 =            FEATURES            =
 ================================*/
 .feature-item {
-  transition: all .2s ease-in-out 0s !important; }
-  .feature-item:hover {
-    transform: translateY(-13px); }
+  transition: all .2s ease-in-out 0s !important;
+}
+
+.feature-item:hover {
+  transform: translateY(-13px) scale(1.05);
+}
 
 .progress-bar {
   background-color: #6c757d; }
@@ -888,3 +891,149 @@ section {
 }
 
 
+.scroll-arrows {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  animation: fade 3s infinite;
+  margin-bottom: 50px;
+}
+
+.scroll-arrows i {
+  display: block;
+  margin-bottom: -10px;
+  color: #fff;
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+.scroll-arrows i:nth-child(1) {
+  animation: fade 3s infinite;
+  animation-delay: 0s;
+}
+
+.scroll-arrows i:nth-child(2) {
+  animation: fade 3s infinite;
+  animation-delay: 1s;
+}
+
+.scroll-arrows i:nth-child(3) {
+  animation: fade 3s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes fade {
+  0%, 33%, 100% { opacity: 1; }
+  66% { opacity: 0; }
+}
+
+#sustainability-section {
+  color: #fff;
+  padding: 100px 0;
+}
+
+.sustainability-title-wrap {
+  text-align: center;
+}
+
+.sustainability-title-wrap h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.sustainability-title-wrap h2 small {
+  font-size: 0.9em;
+}
+
+.sustainability-text {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.sustainability-readmore {
+  color: #007BFF;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.sustainability-readmore i {
+  margin-left: 10px;
+}
+
+.sustainability-pillars {
+  border-left: 1px solid #fff;
+  padding-left: 30px;
+}
+
+.sustainability-pillars-title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-right: 200px; /* Adjust as needed */
+  margin-left: 40px;
+  font-size: 1.5em;
+}
+
+.sustainability-pillars-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sustainability-pillars-list li {
+  flex: 0 0 calc(25% - 10px); /* Adjust for 4 icons per row */
+  margin-bottom: 40px;
+  margin-right: 1px;
+  margin-left: 1px;
+  font-size: 0.9em; /* Adjust to make pillars smaller */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sustainability-pillars-list li .icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 10px; /* Adjust as needed */
+  width: 40px; /* Adjust to make pillars smaller */
+  height: 40px; /* Adjust to make pillars smaller */
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out; /* Add for hover effect */
+}
+
+.sustainability-pillars-list li .icon-wrap:hover {
+  transform: scale(1.1); /* Add for hover effect */
+}
+
+.sustainability-pillars-list li i {
+  margin: 0;
+}
+
+.sustainability-pillars-list li:last-child .icon-wrap i {
+  content: "\f061"; /* Add for right-facing arrow */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.read-more-icon:hover i {
+  animation: bounce 1s;
+}
