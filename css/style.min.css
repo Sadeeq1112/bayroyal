@@ -817,8 +817,25 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* black overlay with 50% opacity */
+  background-color: rgba(0, 0, 0, 1.5); /* black overlay with 50% opacity */
 }
+.unique-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  z-index: 1; /* layer the overlay above the image */
+}
+
+.unique-image {
+  height: 710px;
+  object-fit: cover;
+  position: relative;
+  z-index: 0; /* layer the image below the overlay */
+}
+
 
 .new-content {
   position: relative;
@@ -847,25 +864,18 @@ section {
   -webkit-transform: rotate(-45deg);
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .new-jumbotron {
-    min-height: 500px;
-  }
-
-  .new-content {
-    padding-top: 40%;
-  }
-
-  .new-content h1,
-  .new-content p {
-    font-size: 18px;
-  }
-
-  .new-button {
-    padding: 5px 10px;
-  }
+.carousel-caption {
+  top: 60%;
+  transform: translateY(-50%);
 }
+.carousel-caption h5 {
+  font-size: 2.7em; /* adjust as needed */
+}
+
+.carousel-caption p {
+  font-size: 1em; /* adjust as needed */
+}
+
 .fas.fa-cogs {
   color: #007bff; /* Blue */
 }
@@ -1037,55 +1047,6 @@ section {
 .read-more-icon:hover i {
   animation: bounce 1s;
 }
-@media (max-width: 768px) {
-  .sustainability-pillars-list li {
-    flex: 0 0 calc(50% - 10px); /* Adjust for 2 icons per row */
-    margin-bottom: 20px;
-    margin-right: 0.5px;
-    margin-left: 0.5px;
-    font-size: 0.8em; /* Adjust to make pillars smaller */
-  }
-
-  .sustainability-pillars-title {
-    margin-right: 20px; /* Adjust as needed */
-    margin-left: 20px;
-    font-size: 1.2em;
-  }
-
-  .sustainability-pillars {
-    padding-left: 15px;
-  }
-
-  .sustainability-pillars-list li .icon-wrap {
-    width: 30px; /* Adjust to make pillars smaller */
-    height: 30px; /* Adjust to make pillars smaller */
-  }
-}
-
-@media (max-width: 480px) {
-  .sustainability-pillars-list li {
-    flex: 0 0 calc(100% - 10px); /* Adjust for 1 icon per row */
-    margin-bottom: 20px;
-    margin-right: 0.5px;
-    margin-left: 0.5px;
-    font-size: 0.7em; /* Adjust to make pillars smaller */
-  }
-
-  .sustainability-pillars-title {
-    margin-right: 10px; /* Adjust as needed */
-    margin-left: 10px;
-    font-size: 1em;
-  }
-
-  .sustainability-pillars {
-    padding-left: 10px;
-  }
-
-  .sustainability-pillars-list li .icon-wrap {
-    width: 25px; /* Adjust to make pillars smaller */
-    height: 25px; /* Adjust to make pillars smaller */
-  }
-}
 
 .custom-header {
   position: relative;
@@ -1105,7 +1066,7 @@ section {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.85); /* Add an overlay */
+  background: rgba(0, 0, 0, 0.6); /* Add an overlay */
 }
 
 .custom-header .header-content {
@@ -1224,21 +1185,69 @@ section {
   background-color: white;
   margin: 0 auto 20px;
 }
-/* Responsive CSS */
 
-@media screen and (max-width: 1200px) {
-  .company-history .section-title {
-    font-size: 1.8em;
+/* For mobile devices */
+@media (max-width: 480px) {
+  .logo {
+    width: 50px;
   }
 
-  .company-history p {
-    font-size: 1.1em;
+  .my-jumbotron, .new-jumbotron {
+    min-height: 300px;
   }
-}
 
-@media screen and (max-width: 992px) {
+  .new-content {
+    padding-top: 10%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.5em;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8em;
+  }
+
+  .sustainability-pillars-list li {
+    flex: 0 0 calc(100% - 10px); /* 1 icon per row */
+  }
+
+  .custom-header .header-content {
+    font-size: 1.5em;
+  }
+
+  .pabout {
+    font-size: 1em;
+  }
+
+  #vision-mission .section-title {
+    font-size: 1.5em;
+  }
+
+  #vision-mission .vision-content,
+  #vision-mission .mission-content {
+    font-size: 0.8em;
+  }
+
+  #executive-leadership .section-title {
+    font-size: 1.5em;
+  }
+
+  #executive-leadership .leader-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #executive-leadership .leader-name {
+    font-size: 0.8em;
+  }
+
+  #executive-leadership .leader-title {
+    font-size: 0.7em;
+  }
+
   .company-history .section-title {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   .company-history p {
@@ -1246,22 +1255,71 @@ section {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .company-history .section-title {
-    font-size: 1.4em;
+/* For tablet devices */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .logo {
+    width: 75px;
   }
 
-  .company-history p {
+  .my-jumbotron, .new-jumbotron {
+    min-height: 500px;
+  }
+
+  .new-content {
+    padding-top: 15%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 2em;
+  }
+
+  .carousel-caption p {
     font-size: 0.9em;
   }
-}
 
-@media screen and (max-width: 576px) {
-  .company-history .section-title {
+  .sustainability-pillars-list li {
+    flex: 0 0 calc(50% - 10px); /* 2 icons per row */
+  }
+
+  .custom-header .header-content {
+    font-size: 1.8em;
+  }
+
+  .pabout {
     font-size: 1.2em;
   }
 
-  .company-history p {
+  #vision-mission .section-title {
+    font-size: 1.8em;
+  }
+
+  #vision-mission .vision-content,
+  #vision-mission .mission-content {
+    font-size: 0.9em;
+  }
+
+  #executive-leadership .section-title {
+    font-size: 1.8em;
+  }
+
+  #executive-leadership .leader-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #executive-leadership .leader-name {
+    font-size: 0.9em;
+  }
+
+  #executive-leadership .leader-title {
     font-size: 0.8em;
+  }
+
+  .company-history .section-title {
+    font-size: 1.8em;
+  }
+
+  .company-history p {
+    font-size: 1.1em;
   }
 }
