@@ -46,7 +46,7 @@
                     <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
+                    <a class="nav-link" href="projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
@@ -355,15 +355,15 @@
 </section>
 
 
-<!-- End of Portfolio Section -->	<!-- Client Section -->
-<section id="client" class="overlay bg-fixed" style="background-image: url(img/bg.jpg);">
+<!-- Client Section -->
+<section id="client" style="background-color: white;">
     <div class="container">
         <div class="section-content" data-aos="fade-up">
             <div class="row ">
                 <div class="col-md-12">
                     <!-- Section Title -->
                     <div class="title-wrap mb-5">
-                        <h2>Who love to <span> work</span> with us</h2>
+                        <h2>Some of Our <span>Clients</span></h2>
                     </div>
                     <!-- End of Section Title -->
                 </div>
@@ -383,7 +383,7 @@
                             <img class="img-responsive" src="img/ENUGULOGO.svg" alt=" ">
                         </div>
                         <div class="client-item">
-                            <img class="img-responsive" src="img/nigerian army.jpeg" alt=" "i>
+                            <img class="img-responsive" src="img/nigerian army.jpeg" alt=" ">
                         </div>
                         <div class="client-item">
                             <img class="img-responsive" src="img/client.png" alt=" ">
@@ -394,6 +394,27 @@
             </div>
         </div>
 </section>
+
+<!-- Custom CSS -->
+<style>
+    #client .client-holder {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #client .client-item {
+        flex: 1 0 21%; /* This will make the items responsive, displaying 4 items per row */
+        margin: 1%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a little depth */
+    }
+
+    #client .client-item img {
+        max-width: 100%;
+        height: auto;
+        background: transparent;
+    }
+</style>
 <!-- End of Client Section -->	<!-- Reservation Section -->
 <section id="reservation" class="bg-white section-content">
     <div class="container">
